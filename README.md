@@ -22,8 +22,7 @@ A simple android app for sellers. The seller can add, edit and delete products t
 
 # Screenshots
 <p align="center" width="100%">
-    <img width="33%" src="https://github.com/Amit-guha/EShop/blob/master/app/src/main/assets/Homepage.jpg"> 
-    <img width="33%" src="https://github.com/Amit-guha/EShop/blob/master/app/src/main/assets/AddtoCart.jpg"> 
-    <img width="33%" src="https://github.com/Amit-guha/EShop/blob/master/app/src/main/assets/OrderSummaryScreen.jpg"> 
-  <img width="33%" src="https://github.com/Amit-guha/EShop/blob/master/app/src/main/assets/Error.jpg">
+    <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/FirstPage.jpg"> 
+    <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/productShow.jpg"> 
+    <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/productaddpage.jpg"> 
 </p>
