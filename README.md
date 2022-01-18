@@ -23,6 +23,6 @@ A simple android app for sellers. The seller can add, edit and delete products t
 # Screenshots
 <p align="center" width="100%">
     <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/FirstPage.jpg"> 
-    <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/productShow.jpg"> 
     <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/productaddpage.jpg"> 
+     <img width="33%" src="https://github.com/Amit-guha/ShopKeeper/blob/master/app/src/main/assets/productShow.jpg"> 
 </p>
