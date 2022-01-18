@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".salesfragment.SalesItemAdd">
+
+   <!--Parent Linerlayout with orientation vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- create a Linear Layout with horizontal orientation
+    and weightSum property -->
+        <!--layout 1-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Etcustomername"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="2"
+                android:hint="Items">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/at_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--price-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_inputPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:hint="Price">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <!--Below linerlayout 1-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+
+            <!--Quantity-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_inputQuantity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1.2"
+                android:hint="Quantity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Total-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_inputTotalPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1.2"
+                android:hint="Total">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Imagebutton-->
+
+            <ImageButton
+                android:id="@+id/imgAddButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5sp"
+            android:background="#E9EDED"/>
+
+        <!--end parent Linerlayout-->
+
+        <!--Recyclerview-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:id="@+id/linertitle"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/tv_itemname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bentham"
+                    android:gravity="center"
+                    android:text="Item"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_itemprice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:fontFamily="@font/bentham"
+                    android:text="Price"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_itemQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1.1"
+                    android:gravity="center"
+                    android:fontFamily="@font/bentham"
+                    android:text="Quantity"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_itemTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:fontFamily="@font/bentham"
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_itemAction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bentham"
+                    android:text="Action"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/recycler_cartitem" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!--Sales Summary-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5sp"
+            android:background="#E9EDED"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Linerinvisible"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+
+                <!--Total price-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/alike"
+                        android:text="Total Price :"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="20sp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_total_taka"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <!--Paid-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_paid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="Paid :"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/alike"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/tv_paid_taka"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/alike"
+                        android:hint="Paid Amount"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!--Due-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_due"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="Due :"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/alike"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_due_taka"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/alike"
+                        android:hint="Due Amount"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_marginTop="15sp"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

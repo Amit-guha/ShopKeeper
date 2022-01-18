@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/salesheader">
+
+    <fragment
+        android:id="@+id/salesheader"
+        android:name="com.example.shopkeeper.salesfragment.salesheader"
+        android:label="sales_header"
+        tools:layout="@layout/sales_header">
+        <action
+            android:id="@+id/action_salesheader_to_salesItemAdd"
+            app:destination="@id/salesItemAdd" />
+        <action
+            android:id="@+id/action_salesheader_to_saleslistshow"
+            app:destination="@id/saleslistshow" />
+    </fragment>
+    <fragment
+        android:id="@+id/salesItemAdd"
+        android:name="com.example.shopkeeper.salesfragment.SalesItemAdd"
+        android:label="salesitemsadd"
+        tools:layout="@layout/salesitemsadd" >
+
+        <argument
+            android:name="header"
+            app:argType="com.example.shopkeeper.data.salesIntro" />
+        <action
+            android:id="@+id/action_salesItemAdd_to_saleslistshow"
+            app:destination="@id/saleslistshow" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleslistshow"
+        android:name="com.example.shopkeeper.salesfragment.saleslistshow"
+        android:label="saleshow"
+        tools:layout="@layout/saleshow" >
+        <action
+            android:id="@+id/action_saleslistshow_to_salesheader"
+            app:destination="@id/salesheader" />
+        <action
+            android:id="@+id/action_saleslistshow_to_salesItemEdit"
+            app:destination="@id/salesItemEdit" />
+    </fragment>
+    <fragment
+        android:id="@+id/salesItemEdit"
+        android:name="com.example.shopkeeper.salesfragment.SalesItemEdit"
+        android:label="salesitemedit"
+        tools:layout="@layout/salesitemedit">
+        <argument
+            android:name="newitem"
+            app:argType="com.example.shopkeeper.data.saleslist" />
+        <action
+            android:id="@+id/action_salesItemEdit_to_saleslistshow"
+            app:destination="@id/saleslistshow" />
+    </fragment>
+</navigation>

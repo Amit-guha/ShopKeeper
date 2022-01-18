@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre_semibold</item>
+        <item>@font/acme</item>
+        <item>@font/alice</item>
+        <item>@font/alike</item>
+        <item>@font/bentham</item>
+        <item>@font/berkshire_swash</item>
+        <item>@font/delius</item>
+        <item>@font/roboto</item>
+    </array>
+</resources>

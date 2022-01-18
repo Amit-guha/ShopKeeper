@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    android:layout_margin="4dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tv_itemname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/alike"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:text="Pizza"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_itemprice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.9"
+            android:text="30"
+            android:textColor="@color/black"
+            android:fontFamily="@font/alike"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_itemQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/alike"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_itemTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:fontFamily="@font/alike"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/img_Delete"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:backgroundTint="@color/white"
+            app:tint="#DD2C00" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
